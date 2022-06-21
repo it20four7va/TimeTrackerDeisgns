@@ -1,0 +1,848 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="css/slick.min.css" rel="stylesheet" />
+    <link href="css/slick-theme.min.css" rel="stylesheet" />
+    <link href="css/jquery-comments.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+    <link href="css/file-upload.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://viima.github.io/jquery-comments/demo/css/jquery-comments.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/admin.css" rel="stylesheet" />
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <title>20fourVA | Time Tracker</title>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    <script src="js/scripts.js"></script>
+    <script src="js/file-upload.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://mojoaxel.github.io/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(function () {
+            $('.datetime').datetimepicker({
+                format: 'mm/dd/yyyy hh:ii P',
+                autoclose: true,
+                todayBtn: true,
+            }).datetimepicker("setDate", new Date());
+            var table = $('.vatable').DataTable({
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true
+            });
+        });
+        $('.vachkbox').DataTable({
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'os',
+                selector: 'td:first-child'
+            },
+            order: [[1, 'asc']]
+        });
+    </script>
+    <script src="js/custom.js"></script>
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand">
+            <img src="images/20four7va_logo.png" />
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+        <a class="welcomename">View full page ticket</a>
+
+        <div class="header-right ms-auto me-0 me-md-3 my-2 my-md-0 d-flex">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd notificationbell dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-bell-fill"></i><span class="noti">01</span></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd dropdown-toggle" id="settingdd" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear-fill"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingdd">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="d-flex h-100 align-items-center client-name">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Client</option>
+                    <option value="1">Client one</option>
+                    <option value="2">Client two</option>
+                    <option value="3">Client there</option>
+                </select>
+            </div>
+
+            <div class="user-panel d-flex h-100 align-items-center">
+                <span class="user-photo">
+                    <img src="images/user.png" />
+                </span>
+                <div class="user-name">
+                    <h5>Rajdeep Roy</h5>
+                    <i>IT Development Manager</i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="#" aria-expanded="false" aria-controls="download">
+                            <div class="sb-nav-link-icon"><i class="bi bi-house-door-fill"></i></div>
+                            Dashboard
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#download" aria-expanded="false" aria-controls="download">
+                            <div class="sb-nav-link-icon"><i class="bi bi-cloud-arrow-down-fill"></i></div>
+                            Download
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="download" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Windows</a>
+                                <a class="nav-link" href="#">Mac</a>
+                                <a class="nav-link" href="#">Linux</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#screenshot" aria-expanded="false" aria-controls="manuallogs">
+                            <div class="sb-nav-link-icon"><i class="bi bi-image-fill"></i></div>
+                            Screenshot
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="screenshot" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">View Screenshots</a>
+                                <a class="nav-link" href="#">Manage Screenshots</a>
+                                <a class="nav-link" href="#">Manage Deleted Screenshot</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#manuallogs" aria-expanded="false" aria-controls="manuallogs">
+                            <div class="sb-nav-link-icon"><i class="bi bi-pencil-square"></i></div>
+                            Manual Logs
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="manuallogs" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Add Manual Log</a>
+                                <a class="nav-link" href="#">Manage Manual Logs</a>
+                                <a class="nav-link" href="#">Manage Manual Log Requests</a>
+                                <a class="nav-link" href="#">Add Overtime Hours</a>
+                                <a class="nav-link" href="#">Manage Overtime Logs</a>
+                                <a class="nav-link" href="#">Manage Overtime Logs Requests</a>
+                                <a class="nav-link" href="#">Apply for Leave</a>
+                                <a class="nav-link" href="#">Manage Leaves</a>
+                                <a class="nav-link" href="#">Manage Leave Applications</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#reports" aria-expanded="false" aria-controls="reports">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard-data"></i></div>
+                            Reports
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="reports" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    Send My EOD
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Submit Speed Test
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    TimeSheets
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    User Report (Individual)
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    User Report (All Users)
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Download All User Timesheet
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Download Client Wise Timesheet
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    User Leaves
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Approved Leaves
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Speed Test All
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Speed Test Individual
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Speed Test Not-submitted
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Late Users
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    Rollback Hours
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    User Report Analysis
+                                </a>
+
+                                <a class="nav-link" href="#">
+                                    User Report All Analysis
+                                </a>
+
+                                <a class="nav-link" href="#">View Last Time Stamp</a>
+                            </nav>
+                        </div>
+
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#users" aria-expanded="false" aria-controls="users">
+                            <div class="sb-nav-link-icon"><i class="bi bi-person-fill"></i></div>
+                            Users
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="users" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    New User
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Invite User
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Manage Contractor
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Manage Client
+                                </a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#operations" aria-expanded="false" aria-controls="operations">
+                            <div class="sb-nav-link-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            Operations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="operations" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    Projects
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Tasks
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Quota
+                                </a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#help" aria-expanded="false" aria-controls="help">
+                            <div class="sb-nav-link-icon"><i class="bi bi-question-circle-fill"></i></div>
+                            Help
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="help" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Windows</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Mac</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Linux</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    10/28/2021<br />
+                    05:02:42 PM EDT
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <div class="dashboard-inner">
+                <div class="full-tickit">
+                    <div class="table-top">
+                        <div class="row d-flex h-100 align-items-center justify-content-between">
+                            <div class="col-xl-2 col-lg-7">
+                                <div class="tickit-id">
+                                    #30021548484
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-5">
+                                <div class="tickit-search text-end">
+                                    <div class="form-group">
+                                        <input placeholder="Search" type="text" />
+                                        <a href="#" class="search"><i class="bi bi-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tickit-block">
+                        <div class="tickit-header">
+                            <div class="g-0 d-lg-flex justify-content-between">
+                                <div class="right-part">
+                                    <div class="tickit-top">
+                                        <div>
+                                            <p>Requester:</p>
+                                            <h6>Admin</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tickit-top">
+                                        <div>
+                                            <p>Request Category:</p>
+                                            <h6>IT</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tickit-top">
+                                        <div>
+                                            <p>Request Type:</p>
+                                            <h6>IT1</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tickit-top">
+                                        <div>
+                                            <p>Priority:</p>
+                                            <h6>High</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-part right-end">
+                                    <div class="tickit-top">
+                                        <div class="nameid">
+                                            <p>Name <strong>ID : 00087</strong></p>
+                                            <h6>Rajdeep Roy</h6>
+                                            <a>rajdeeproy20@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="full-subject">
+                            <h4>Ticket Subject will be here</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                            </p>
+                        </div>
+                        <div class="action-part">
+                            <div class="assign actionmode">
+                                <a class="btn btn-asign" href="#">Assign</a>
+                                <a class="btn btn-asign btn-accept" href="#">Accept</a>
+                            </div>
+                            <div class="aticket actionmode">
+                                <p>Ticket has been assigned to you </p>
+                                <a class="btn btn-accept me-2">Accept</a>
+                                <a class="btn btn-accept btn-reject">Reject</a>
+                            </div>
+                            <div class="status actionmode">
+                                <span>Status: </span>
+                                <select id="cars">
+                                    <option value="hold">On Hold</option>
+                                    <option value="active">Active</option>
+                                    <option value="pending">Pending</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="comment-box">
+                            <div class="comment-part">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="user-front">
+                                        <div class="u-pic">
+                                            <span>
+                                                <img src="images/user.png" />
+                                            </span>
+                                        </div>
+                                        <div class="u-name">
+                                            <h4>Martin John</h4>
+                                            <span>1 hour ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                        <div class="tick">
+                                            <span>
+                                                <i class="bi bi-check2-all"></i>
+                                            </span>
+                                        </div>
+                                        <div class="dd-action">
+                                            <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                <li><button class="dropdown-item" type="button">Delete</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-comment">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                                </div>
+                                <div class="comment-action">
+                                    <button class="btn btn-like"><i class="bi bi-arrow-up-short"></i> 10</button>
+                                    <button class="btn btn-dlike"><i class="bi bi-arrow-down-short"></i> 02</button>
+                                    <button class="btn btn-reply"><i class="bi bi-reply-fill"></i> Reply</button>
+                                </div>
+                            </div>
+                            <div class="first-nested">
+                                <!------Comment Start------->
+                                <div class="comment-part nested1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="user-front">
+                                            <div class="u-pic">
+                                                <span>
+                                                    <img src="images/user.png" />
+                                                </span>
+                                            </div>
+                                            <div class="u-name">
+                                                <h4>Paul Svensson</h4>
+                                                <span>1 hour ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                            <div class="tick green">
+                                                <span>
+                                                    <i class="bi bi-check2-all"></i>
+                                                </span>
+                                            </div>
+                                            <div class="dd-action">
+                                                <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                    <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                    <li><button class="dropdown-item" type="button">Delete</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-comment">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                    </div>
+                                    <div class="comment-action">
+                                        <div class="file-share fullpage">
+                                            <form action="#" name="form" method="get">
+                                                <div class="file">
+                                                    <div class="row">
+
+                                                        <div class="file__input col-lg-12 attach-file" id="file__input">
+
+                                                            <input class="file__input--file" id="customFile" type="file" multiple="multiple" name="files[]" />
+                                                            <label class="attach" for="customFile" data-text-btn="Upload"></label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <button class="btn btn-send">Send</button>
+
+                                    </div>
+                                </div>
+                                <!------Comment End------->
+                                <!------Comment Start------->
+                                <div class="comment-part nested1 owner">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="user-front">
+                                            <div class="u-pic">
+                                                <span>
+                                                    <img src="images/user.png" />
+                                                </span>
+                                            </div>
+                                            <div class="u-name">
+                                                <h4>Adam Nalan</h4>
+                                                <span>1 hour ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                            <div class="tick green">
+                                                <span>
+                                                    <i class="bi bi-check2-all"></i>
+                                                </span>
+                                            </div>
+                                            <div class="dd-action">
+                                                <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                    <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                    <li><button class="dropdown-item" type="button">Delete</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view-comment">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                                        <div class="attach-dox">
+                                            <div class="a-file">
+                                                <i class="bi bi-paperclip"></i> Signup.svg
+                                            </div>
+                                            <div class="a-file">
+                                                <i class="bi bi-paperclip"></i> Sign in.pdf
+                                            </div>
+                                            <div class="a-file">
+                                                <i class="bi bi-paperclip"></i> Refereal-2.jpg
+                                            </div>
+                                            <div class="a-file">
+                                                <i class="bi bi-paperclip"></i> project-document.pdf
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="comment-action">
+                                        <button class="btn btn-like"><i class="bi bi-arrow-up-short"></i> 10</button>
+                                        <button class="btn btn-dlike"><i class="bi bi-arrow-down-short"></i> 02</button>
+                                        <button class="btn btn-reply"><i class="bi bi-reply-fill"></i> Reply</button>
+                                    </div>
+                                </div>
+                                <!------Comment End------->
+
+                                <div class="second-nested">
+                                    <!------Comment Start------->
+                                    <div class="comment-part nested2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="user-front">
+                                                <div class="u-pic">
+                                                    <span>
+                                                        <img src="images/user.png" />
+                                                    </span>
+                                                </div>
+                                                <div class="u-name">
+                                                    <h4>Anna Milier</h4>
+                                                    <span>1 hour ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                                <div class="tick">
+                                                    <span>
+                                                        <i class="bi bi-check2-all"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="dd-action">
+                                                    <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                        <li><button class="dropdown-item" type="button">Delete</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="view-comment">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                                            <div class="attach-dox">
+                                                <div class="a-file">
+                                                    <i class="bi bi-paperclip"></i> Signup.svg
+                                                </div>
+                                                <div class="a-file">
+                                                    <i class="bi bi-paperclip"></i> Sign in.pdf
+                                                </div>
+                                                <div class="a-file">
+                                                    <i class="bi bi-paperclip"></i> Refereal-2.jpg
+                                                </div>
+                                                <div class="a-file">
+                                                    <i class="bi bi-paperclip"></i> project-document.pdf
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-action">
+                                            <button class="btn btn-like"><i class="bi bi-arrow-up-short"></i> 10</button>
+                                            <button class="btn btn-dlike"><i class="bi bi-arrow-down-short"></i> 02</button>
+                                            <button class="btn btn-reply"><i class="bi bi-reply-fill"></i> Reply</button>
+                                        </div>
+                                    </div>
+                                    <!------Comment End------->
+                                    <!------Comment Start------->
+                                    <div class="comment-part nested2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="user-front">
+                                                <div class="u-pic">
+                                                    <span>
+                                                        <img src="images/user.png" />
+                                                    </span>
+                                                </div>
+                                                <div class="u-name">
+                                                    <h4>Martin John</h4>
+                                                    <span>1 hour ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                                <div class="tick">
+                                                    <span>
+                                                        <i class="bi bi-check2-all"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="dd-action">
+                                                    <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                        <li><button class="dropdown-item" type="button">Delete</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="view-comment">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                                        </div>
+                                        <div class="comment-action">
+                                            <button class="btn btn-like"><i class="bi bi-arrow-up-short"></i> 10</button>
+                                            <button class="btn btn-dlike"><i class="bi bi-arrow-down-short"></i> 02</button>
+                                            <button class="btn btn-reply"><i class="bi bi-reply-fill"></i> Reply</button>
+                                        </div>
+                                    </div>
+                                    <!------Comment End------->
+                                </div>
+                                <!------Comment Start------->
+                                <div class="comment-part nested1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="user-front">
+                                            <div class="u-pic">
+                                                <span>
+                                                    <img src="images/user.png" />
+                                                </span>
+                                            </div>
+                                            <div class="u-name">
+                                                <h4>Robert Babinski</h4>
+                                                <span>1 hour ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="action-icon d-flex h-100 align-items-center gap-3">
+                                            <div class="tick green">
+                                                <span>
+                                                    <i class="bi bi-check2-all"></i>
+                                                </span>
+                                            </div>
+                                            <div class="dd-action">
+                                                <a class="dropdown" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                    <li><button class="dropdown-item" type="button">Edit</button></li>
+                                                    <li><button class="dropdown-item" type="button">Delete</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view-comment">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                                    </div>
+                                    <div class="comment-action">
+                                        <button class="btn btn-like"><i class="bi bi-arrow-up-short"></i> 10</button>
+                                        <button class="btn btn-dlike"><i class="bi bi-arrow-down-short"></i> 02</button>
+                                        <button class="btn btn-reply"><i class="bi bi-reply-fill"></i> Reply</button>
+                                    </div>
+                                </div>
+                                <!------Comment End------->
+                            </div>
+
+                            <!------my html start------->
+                            <div class="popup">
+                                <div class="row d-flex justify-content-end">
+
+                                    <button type="button" class="btn popup-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="bi bi-file-earmark-text-fill"></i>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="files">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Attach Files</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="document">
+                                                            <h1><i class="bi bi-paperclip"></i> Document 001.jpg <span class="times">04:30 PM</span></h1>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="document">
+                                                            <h1><i class="bi bi-paperclip"></i> Document 002.pdf <span class="times">05:00 PM</span></h1>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="document">
+                                                            <h1><i class="bi bi-paperclip"></i> Document 003.word <span class="times">03:54 PM</span></h1>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="document">
+                                                            <h1><i class="bi bi-paperclip"></i> Document 004.pdf <span class="times">03:41 PM</span></h1>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="document">
+                                                            <h1><i class="bi bi-paperclip"></i> Document 005.pdf <span class="times">07:30 PM</span></h1>
+                                                        </div>                                                     
+                                                    </div>                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!------my html end------->
+                        </div>
+                        <!--<div class="doc-download">
+                            <a>
+                                <i class="bi bi-file-earmark-text-fill"></i>
+                            </a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="top-footer">
+                    <div class="container">
+                        <div class="top-bar">
+                            <div class="soical-media">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-google"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                            <div class="signup-box">
+                                <h5>Sign up for our newsletter</h5>
+                                <div class="form-group">
+                                    <input placeholder="Type your email address" />
+                                    <a class="btn btn-subscribe">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="footer-text">
+                            The 20four7VA Time Tracker is a proprietary software developed by 20four7VA and for the sole use of 20four7VA and its clients. Any illegal reproduction of this website and its protected data will result in immediate legal action.
+                        </div>
+                        <div class="footer-menu">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class="head">
+                                            IMPORTANT LINKS
+                                        </li>
+                                        <li><a href="#">Freedom Table</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Report Incidence</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class="head">POLICIES</li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Cookie Policy</a></li>
+                                        <li><a href="#">Terms and Condition</a></li>
+                                        <li><a href="#">Partners</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class="head">HUMAN RESOURCES</li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">Hire a VA</a></li>
+                                        <li><a href="#">HR Desk</a></li>
+                                        <li><a href="#">How it works</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class="head">Support</li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Submit Ticket</a></li>
+                                        <li><a href="#">User Guide</a></li>
+                                        <li><a href="#">Change Log</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright © 2015 - 2021 20four7va.com®</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

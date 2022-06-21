@@ -1,0 +1,582 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="css/slick.min.css" rel="stylesheet" />
+    <link href="css/slick-theme.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Registration</title>
+</head>
+<body>
+    <div class="main-bg">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid p-0">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/20four7va_logo_black.png" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Career</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">About</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Help
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="user-menu">
+                        <form class="d-flex">
+                            <a class="btn btn-user" href="#" role="button" aria-expanded="false">
+                                <span>
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <i>&nbsp;&nbsp; Login</i>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <span class="top-left"></span>
+        <div class="registration">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-11">
+                        <div class="card px-0">
+                            <h2 class="heading">Register your VA Account</h2>
+                            <form id="msform">
+                                <div class="row d-flex m-auto w-100 justify-content-center">
+                                    <div class="col-lg-8">
+                                        <ul id="progressbar">
+                                            <li class="active first" id="account"><strong>Personal</strong></li>
+                                            <li id="personal"><strong>Requirements</strong></li>
+                                            <li id="payment"><strong>HR Policies</strong></li>
+                                            <li class="last" id="confirm"><strong>Financial</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="profile-photo"> 
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <span class="btn btn-default btn-file">
+                                                            <i>Browse…</i>  <input type="file" id="imgInp">
+                                                        </span>
+                                                    </span>
+                                                </div>
+
+                                                <div class="upload-photo">
+                                                    <img id='img-upload' />
+                                                    <span class="user-icon">
+                                                        <i class="bi bi-person-fill"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>First Name<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your First Name">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Last Name<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Last Name">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Email Address<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Email Address">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Phone Number<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your phone number">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Date of Birth<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Date of Birth">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>User Name<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your User Name">
+                                                    <div class="Message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>Password<i>*</i></label>
+                                                    <input type="password" name="User Name" id="username" class="form-control" placeholder="Enter your Password">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Confirm Password<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Confirm Password">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>House / Group / Flat /Block No.<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your House /Group / Flat / Block no.">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Landmark<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Landmark">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>City<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your City">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Country<i>*</i></label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your Country">
+                                                    <div class="Message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Address Type<i>*</i></label>
+                                                    <div class="address-type">
+                                                        <div class="form-check">
+                                                            <div class="select-box">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                                    Home
+                                                                </label>
+                                                                <div class="Message"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-check">
+                                                            <div class="select-box">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                                    Office
+                                                                </label>
+                                                                <div class="Message"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-check">
+                                                            <div class="select-box">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                                <label class="form-check-label" for="flexRadioDefault3">
+                                                                    Other
+                                                                </label>
+                                                                <div class="Message"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next btn-theme float-end" value="Next" />
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group download-sample">
+                                                    <label>Resume</label>
+                                                    <p>Complete our 20four7VA resume to be used during your assessment.</p>
+                                                    <p class="mb-3">Do not change the font size and font. You just need to input your information <strong>(Please see attached file)</strong></p>
+
+                                                    <a class="download-file" download href="#"><i class="bi bi-file-earmark-fill file-icon"></i> Sample Resume <i class="bi bi-arrow-down-short down-arrow"></i></a>
+                                                </div>
+
+                                                <div class="form-group cv-upload">
+                                                    <label class="mb-2">Upload your Resume using the 20four7VA format</label>
+                                                    <div class="input-group">
+                                                        <div>
+                                                            <div class="input-group-append">
+                                                                <a id="customFileInput"><i class="bi bi-cloud-upload-fill"></i></a>
+                                                            </div>
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                                                <label class="custom-file-label" for="customFileLangHTML">
+                                                                    Choose file
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Skype</label>
+                                                    <input type="text" name="skype" id="skype" class="form-control" placeholder="Enter your skype ID">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Portfolio URL</label>
+                                                    <input type="text" name="Portfolio" id="portfolio" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Paste Portfolio URL</label>
+                                                    <input type="text" name="Portfolio" id="portfolio" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Voice Recording </label>
+                                                    <p>For your voice recording, answer the question: <strong>“Why should we hire you?”</strong></p>
+                                                    <div class="voice-texts">
+                                                        <h5>Take note of the following:</h5>
+                                                        <ul>
+                                                            <li>
+                                                                Don’t mention your complete name.
+                                                            </li>
+                                                            <li>Don’t mention any contact details(ex. email or phone number). </li>
+                                                            <li>Make sure there are no audible background noises </li>
+                                                            <li>Use this link to record: LINK HERE </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Voice Recoding Link</label>
+                                                    <input type="text" name="Recoding" id="recoding" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Personality Test</label>
+                                                    <p>
+                                                        Take the Personality Test here: LINK HERE
+                                                        NOTE: Enter the link to your personality test result below.
+                                                    </p>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Personality Test Result</label>
+                                                    <input type="text" name="personality" id="personality" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Sample Customer Service Email</label>
+                                                    <p>
+                                                        Write your response to an upset client who is not
+                                                        happy with our services. This is the complaint, "There have been some scheduling issues between
+                                                        my VA and myself. It seems that she doesn't want to
+                                                        follow up with all my appointments. This has
+                                                        already caused me to lose a client. What is going to
+                                                        be done about this?"
+                                                    </p>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Your Response</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Character Reference 1</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Character Reference 2</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="3"></textarea>
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Character Reference 3</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Speed Test</label>
+                                                    <p class="mb-3">
+                                                        Use www.speedtest.net to get your speed test
+                                                        results. We need result links for BOTH MAIN and
+                                                        BACKUP internet. You may use your mobile data as
+                                                        your backup internet.
+                                                    </p>
+                                                    <p>
+                                                        <strong>NOTE:</strong> We require internet speeds of 5mbps or
+                                                        higher for BOTH main and backup connections. The
+                                                        speed test must be taken from your workstation or
+                                                        system
+                                                    </p>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Your Main Internet Speed Test Result</label>
+                                                    <input type="text" name="internet-speed" id="internet-speed" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Your Backup Internet Speed Test Result</label>
+                                                    <input type="text" name="internet-speed2" id="internet-speed2" class="form-control" placeholder="https//">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group cv-upload">
+                                                    <div class="form-group">
+                                                        <label>Computer Specs</label>
+                                                        <p>Upload a screenshot of your system configuration below.</p>
+                                                        <div class="input-group">
+                                                            <div>
+                                                                <div class="input-group-append">
+                                                                    <a id="customFileInput"><i class="bi bi-cloud-upload-fill"></i></a>
+                                                                </div>
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                                                    <label class="custom-file-label" for="customFileLangHTML">
+                                                                        Choose file
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next btn btn-theme mt-3 float-end" value="Next" />
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="policy">
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree with the Client Endorsement Process?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                                <p>After this Final Interview, we will begin the matching process wherein we will find a suitable client for you. Once we find a match, an email will be sent to your PRIMARY EMAIL ADDRESS. It is important that all emails from 20four7VA need to be replied to within 24 hours. Failure to reply within the allotted period means that you are not interested and you will be taken out of our endorsement list. Please review the email about the job endorsement. If NOT INTERESTED, reply to the email and let us know the reason why you are not applying and that will be feedback for the team. If you ARE INTERESTED, send us your Letter of Intent highlighting your skills and competencies in relation to the job description. Once we receive your letter of intent within 24 hours, we will review it and send it to the client. Client will then review and if you pass the Client's paper screening, you will be scheduled for a Client Interview. During the interview, Client will be asking you questions and assessing your skills. You can ask questions there too to know more about the job. Give the Client a few days or even a few weeks to decide to hire as the Client will also be interviewing other applicants. An email will be sent to you to know about the results. In addition, after this interview, I'll add you to a Skype chatroom where you can see available open jobs. In case you are interested in any of those, just signify your interest there in the chatroom and a Specialist will reach out to you regarding your inquiry.</p>
+                                            </div>
+
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree with our week-withhold policy?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                                                    </div>
+                                                </div>
+                                                <p>We have a week withhold policy wherein we withhold a total of 200% of your weekly pay starting on the 1st week and staggered up until the 3rd week (1st week - 100% withhold, 2nd & 3rd week - 50% withhold). We are withholding the salary for the security & guarantee of the Client and the Company and this amount is intact and will be released as soon as you end with a Client and just as long as you are in good standing. Pls note that there's a withhold in pay every time there would be an increase in the weekly contracted hours. The payroll cut off we follow is Mon-Sun EST. Pay is sent via Transferwise weekly, every Wednesday, on or before 12mn EST. We will also be transitioning to an every-other-week pay and we will just let you know in advance once this will take effect.</p>
+                                            </div>
+
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree with our travel policy?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
+                                                    </div>
+                                                </div>
+                                                <p>In case you will be traveling and working at the same time, pls let us know where you will be going as we need to ensure that the internet speed of the workspace you will go to will meet the minimum of 5mbps requirement.</p>
+                                            </div>
+
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree with our timekeeping policy?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
+                                                    </div>
+                                                </div>
+                                                <p>We use a timekeeping software that keeps track of hours logged while you are working. It also takes screen shots as proof of work. Clients and 20four7VA have access to this software that we use. The hours logged here would be the basis of your payroll, after validation.</p>
+                                            </div>
+
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree to fill up the Recruitment Survey?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault5">
+                                                    </div>
+                                                </div>
+                                                <p>We value your feedback regarding the recruitment process. Pls answer this survey after this interview</p>
+                                            </div>
+
+                                            <div>
+                                                <div class="policy-switch">
+                                                    <h5>Do you agree to join the VA Facebook Group?</h5>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault6">
+                                                    </div>
+                                                </div>
+                                                <p>Request from candidate: Please join our Facebook Group so you can get updates from 20four7VA.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next btn btn-theme float-end" value="Next" />
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label>Upload a photo or scan of your valid Gov't.ID (via GDrive, WeTransfer, DropBox, etc.,) and paste the downloadable link below.</label>
+                                                    <input type="text" name="photoupload" id="photoupload" class="form-control" placeholder="https://">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>Signed W9 Form</label>
+                                                    <input type="text" name="w9form" id="w9form" class="form-control" placeholder="https://">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Bank Name</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Bank Name">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Swift Code / IFSC Code</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Swift Code / IFSC Code">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Account Name</label>
+                                                    <input type="number" name="User Name" id="username" class="form-control" placeholder="Account Name">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Account Name</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Account Name">
+                                                    <div class="Message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>Country of Residence</label>
+                                                    <input class="form-control" type="text" value="Spain" aria-label="Disabled input example" disabled readonly>
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Home Address</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Enter your User Name">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>City</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="City">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Post Code</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="Post Code">
+                                                    <div class="Message"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>If you are using Payoneer, please provide your email address</label>
+                                                    <input type="text" name="User Name" id="username" class="form-control" placeholder="email">
+                                                    <div class="Message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="btn btn-theme mt-3 float-end" value="Save" />
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootsndle.mintrap.bu.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!--<script src="js/bootstrap.bundle.min.js"></script>-->
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+
+
+    <script src="https://mojoaxel.github.io/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
+    <script>
+        document.querySelector('.custom-file-input').addEventListener('change', function (e) {
+            var fileName = document.getElementById("customFileLangHTML").files[0].name;
+            var nextSibling = e.target.nextElementSibling
+            nextSibling.innerText = fileName
+        })
+    </script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

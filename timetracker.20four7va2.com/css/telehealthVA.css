@@ -1,0 +1,543 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+.tel-banner {
+    background-image: url('../images/hero-bg.png');
+    padding: 100px 0px 0px;
+    background-size: cover;
+    min-height: 650px;
+}
+
+.banner-img {
+    width: 957px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.title-back {
+    background-color: #2092E1;
+    padding: 10px 0px;
+}
+
+.tel-banner h1 {
+    color: #fff;
+    margin-left: 100px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.tel-banner p {
+    color: #000;
+    margin-left: 100px;
+    font-size: 19px;
+    padding: 20px 0px;
+}
+
+.tel-banner .get-btn {
+    background-color: #F66E0A;
+    color: #fff;
+    margin-left: 100px;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.tel-banner .virtual {
+    margin-left: 250px;
+    margin-top: 300px;
+}
+
+.about-is {
+    background-color: #D7E8F4;
+}
+
+    .about-is .medical {
+        padding-left: 100px;
+    }
+
+    .about-is .text-1 {
+    }
+
+        .about-is .text-1 h1 {
+            color: #2092E1;
+            font-size: 60px;
+        }
+
+    .about-is .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-is .text-1 .palign {
+        width: 85%;
+        text-align: justify;
+    }
+
+    .about-is .text-1 p {
+        color: #000;
+        font-size: 20px;
+    }
+
+.accordion {
+    background-color: #eee;
+    padding: 0px 0px 100px;
+}
+
+    .accordion h1 {
+        text-align: center;
+        background-color: #2092E1;
+        padding: 20px 0px;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .accordion .rectangle1 {
+        padding: 100px 0px 0px;
+    }
+
+    .accordion .support-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        /* margin-top: -110px; */
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 19px;
+        width: 100%;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: -69px;
+        left: 0;
+    }
+
+    .accordion .customer-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        margin-top: -110px;
+        border-radius: 20px;
+        padding: 29px 98px;
+        font-size: 22px;
+    }
+
+    .accordion .crative-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        margin-top: -110px;
+        border-radius: 20px;
+        padding: 12px 86px;
+        font-size: 22px;
+    }
+
+    .accordion .row .can-do {
+        position: relative;
+        margin: 50px 20px;
+    }
+
+
+.task-admin {
+    background-color: #E1E3E5
+}
+
+    .task-admin .admin-support {
+        background: url('../images/Rectangle 13.png');
+        min-height: 700px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .task-admin .admin-texts .starts {
+        border-bottom: 2px solid white;
+        width: 360px;
+    }
+
+    .task-admin .task-admin {
+        background-color: #fff;
+        padding: 80px 0px;
+        margin-left: -101px;
+        border-radius: 20px;
+        margin-right: 50px;
+    }
+
+        .task-admin .task-admin ul {
+            list-style: none;
+        }
+
+        .task-admin .task-admin h3 {
+            color: #2092E1;
+            font-weight: bold;
+            padding: 0px 40px 20px;
+        }
+
+        .task-admin .task-admin ul li {
+            color: #2092E1;
+            padding: 0px 12px;
+            font-size: 25px;
+            line-height: 43px;
+        }
+
+    .task-admin .admin-support h1 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .task-admin .admin-support h2 {
+        color: #fff;
+        font-size: 27px;
+    }
+
+    .task-admin .admin-support p {
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 0px 10px;
+    }
+
+    .task-admin .admin-support .get-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+
+.task-admin1 {
+    background-color: #E1E3E5
+}
+
+    .task-admin1 .admin-customer {
+        background: url('../images/Rectangle 14.png');
+        min-height: 700px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .task-admin1 .task-admin1 {
+        background-color: #fff;
+        padding: 80px 0px;
+        border-radius: 20px;
+        z-index: 9;
+        margin-right: -78px;
+        position: relative;
+        margin-left: 50px;
+    }
+
+        .task-admin1 .task-admin1 ul {
+            list-style: none;
+        }
+
+    .task-admin1 .admin-texts .starts {
+        border-bottom: 2px solid white;
+        width: 360px;
+    }
+
+    .task-admin1 .task-admin1 h3 {
+        color: #2092E1;
+        font-weight: bold;
+        padding: 0px 40px 20px;
+    }
+
+    .task-admin1 .task-admin1 ul li {
+        color: #2092E1;
+        padding: 0px 12px;
+        font-size: 25px;
+        line-height: 43px;
+    }
+
+    .task-admin1 .admin-customer h1 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .task-admin1 .admin-customer h2 {
+        color: #fff;
+        font-size: 27px;
+    }
+
+    .task-admin1 .admin-customer p {
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 0px 10px;
+    }
+
+    .task-admin1 .admin-customer .get-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+.task-admin .admin-support1 {
+    background: url('../images/Rectangle 15.png');
+    min-height: 700px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+    .task-admin .admin-support1 .starts {
+        border-bottom: 2px solid white;
+        width: 360px;
+    }
+
+    .task-admin .admin-support1 h3 {
+        color: #2092E1;
+        font-weight: bold;
+        padding: 0px 40px 20px;
+    }
+
+    .task-admin .admin-support1 ul li {
+        color: #2092E1;
+        padding: 0px 12px;
+        font-size: 25px;
+        line-height: 43px;
+    }
+
+    .task-admin .admin-support1 h1 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .task-admin .admin-support1 h2 {
+        color: #fff;
+        font-size: 27px;
+    }
+
+    .task-admin .admin-support1 p {
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 0px 10px;
+    }
+
+    .task-admin .admin-support1 .get-btn {
+        background-color: #F66E0A;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+
+
+
+.from-why {
+    background-color: #fff;
+    padding: 50px 0px;
+}
+
+    .from-why h1 {
+        text-align: center;
+        color: #2092E1;
+        font-weight: bold;
+        padding: 0px 0px 50px;
+    }
+
+    .from-why .overflow-hidden .service-plan {
+        background-color: #E1E3E5;
+        margin: 0px 100px;
+        padding: 24px 41px;
+        border-radius: 20px;
+        height: 100%
+    }
+
+        .from-why .overflow-hidden .service-plan h2 {
+            color: #4B93E1;
+            font-weight: 400;
+            font-size: 25px;
+        }
+
+        .from-why .overflow-hidden .service-plan p {
+            color: #120102;
+            font-size: 20px;
+            line-height: 29px;
+        }
+
+.medical p {
+    /*text-align: center;*/
+    font-size: 22px;
+    color: #120102;
+    padding: 0px 0px 50px;
+}
+
+.row {
+    --bs-gutter-x: -0rem;
+}
+
+
+
+
+@media only screen and (max-width: 786px) {
+    .tel-banner h1 {
+        font-size: 34px;
+    }
+
+    .about-is .medical {
+        padding-left: 0px;
+    }
+
+    .accordion .rectangle1 {
+        padding: 0px;
+    }
+
+    .admin .task-admin {
+        margin: 0px;
+    }
+
+    .about-is .text-1 h1 {
+        color: #2092E1;
+        font-size: 35px;
+        font-weight: 600;
+        padding: 0px;
+        text-align: center;
+    }
+
+
+
+    .about-is .text-1 p {
+        color: #000;
+        font-size: 15px;
+        text-align: justify;
+        margin-left: 50px;
+    }
+
+    .accordion h1 {
+        font-size: 22px;
+    }
+
+    .medical p {
+        font-size: 16px;
+    }
+
+    .task-admin .task-admin {
+        margin-left: 0px;
+        padding: 50px 0px 50px;
+        margin: 0px 0px 50px;
+    }
+
+    .task-admin .admin-support h1 {
+        text-align: center;
+    }
+
+    .task-admin .admin-support h2 {
+        text-align: center;
+    }
+
+    .task-admin .admin-support p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .task-admin .task-admin h3 {
+        font-size: 23px;
+    }
+
+    .task-admin .task-admin ul li {
+        color: #2092E1;
+        padding: 0px 12px;
+        font-size: 20px;
+        line-height: 43px;
+    }
+
+    .task-admin1 .task-admin1 {
+        padding: 50px 0px 50px;
+        margin: 0px 0px 0px;
+    }
+
+        .task-admin1 .task-admin1 h3 {
+            font-size: 23px;
+        }
+
+        .task-admin1 .task-admin1 ul li {
+            font-size: 20px;
+        }
+
+    .task-admin1 .admin-customer h1 {
+        text-align: center;
+    }
+
+    .task-admin1 .admin-customer h2 {
+        text-align: center;
+    }
+
+    .task-admin1 .admin-customer p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .task-admin .admin-support1 h1 {
+        text-align: center;
+    }
+
+    .task-admin .admin-support1 h2 {
+        text-align: center;
+    }
+
+    .task-admin .admin-support1 p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .task-admin .admin-support .get-btn {
+        margin: 0px 190px;
+        top: 55%;
+        transform: translateY(-7%);
+    }
+
+    .task-admin1 .admin-customer .get-btn {
+        margin: 0px 161px;
+        top: 55%;
+        transform: translateY(-7%);
+    }
+
+    .task-admin .admin-support1 .get-btn {
+        margin: 0px 190px;
+        top: 55%;
+        transform: translateY(-7%);
+    }
+
+    .task-admin .admin-texts .starts {
+        margin: 15px 103px;
+        top: 55%;
+    }
+
+    .task-admin1 .admin-texts .starts {
+        border-bottom: 2px solid white;
+        width: 300px;
+        margin: 15px 103px;
+        top: 55%;
+    }
+
+    .task-admin1 .admin-customer {
+        margin: 0px 0px 50px;
+    }
+
+    .banner-img {
+        display: none;
+    }
+
+    .from-why .overflow-hidden .service-plan {
+        margin: 0px;
+        padding: 11px 41px;
+    }
+
+    .about-is .text-1 {
+        padding: 50px 0px 20px;
+    }
+
+    .from-why .overflow-hidden .service-plan p {
+        color: #120102;
+        font-size: 14px;
+        line-height: 29px;
+    }
+}

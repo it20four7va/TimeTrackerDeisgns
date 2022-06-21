@@ -1,0 +1,1031 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="css/slick.min.css" rel="stylesheet" />
+    <link href="css/slick-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+
+    <link href="css/admin.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    <link href="css/dd.css" rel="stylesheet" />
+    <link href="css/flags.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>20fourVA | Time Tracker</title>
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand">
+            <img src="images/20four7va_logo.png" />
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <a class="welcomename">Welcome back Rajdeep Roy! <img src="images/right-tick.svg" /></a>
+        <div class="header-right ms-auto me-0 me-md-3 my-2 my-md-0 d-flex">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd notificationbell dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-bell-fill"></i><span class="noti">01</span></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link settingdd dropdown-toggle" id="settingdd" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear-fill"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingdd">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex h-100 align-items-center client-name">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Client</option>
+                    <option value="1">Client one</option>
+                    <option value="2">Client two</option>
+                    <option value="3">Client there</option>
+                </select>
+            </div>
+            <div class="user-panel d-flex h-100 align-items-center">
+                <span class="user-photo">
+                    <img src="images/user.png" />
+                </span>
+                <div class="user-name">
+                    <h5>Rajdeep Roy</h5>
+                    <i>IT Development Manager</i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link active" href="#" aria-expanded="false" aria-controls="download">
+                            <div class="sb-nav-link-icon"><i class="bi bi-house-door-fill"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#download" aria-expanded="false" aria-controls="download">
+                            <div class="sb-nav-link-icon"><i class="bi bi-cloud-arrow-down-fill"></i></div>
+                            Download
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="download" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Windows</a>
+                                <a class="nav-link" href="#">Mac</a>
+                                <a class="nav-link" href="#">Linux</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#screenshot" aria-expanded="false" aria-controls="manuallogs">
+                            <div class="sb-nav-link-icon"><i class="bi bi-image-fill"></i></div>
+                            Screenshot
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="screenshot" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">View Screenshots</a>
+                                <a class="nav-link" href="#">Manage Screenshots</a>
+                                <a class="nav-link" href="#">Manage Deleted Screenshot</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#manuallogs" aria-expanded="false" aria-controls="manuallogs">
+                            <div class="sb-nav-link-icon"><i class="bi bi-pencil-square"></i></div>
+                            Manual Logs
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="manuallogs" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Add Manual Log</a>
+                                <a class="nav-link" href="#">Manage Manual Logs</a>
+                                <a class="nav-link" href="#">Manage Manual Log Requests</a>
+                                <a class="nav-link" href="#">Add Overtime Hours</a>
+                                <a class="nav-link" href="#">Manage Overtime Logs</a>
+                                <a class="nav-link" href="#">Manage Overtime Logs Requests</a>
+                                <a class="nav-link" href="#">Apply for Leave</a>
+                                <a class="nav-link" href="#">Manage Leaves</a>
+                                <a class="nav-link" href="#">Manage Leave Applications</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#reports" aria-expanded="false" aria-controls="reports">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard-data"></i></div>
+                            Reports
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="reports" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    Send My EOD
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Submit Speed Test
+                                </a>
+                                <a class="nav-link" href="#">
+                                    TimeSheets
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Report (Individual)
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Report (All Users)
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Download All User Timesheet
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Download Client Wise Timesheet
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Leaves
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Approved Leaves
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Speed Test All
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Speed Test Individual
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Speed Test Not-submitted
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Late Users
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Rollback Hours
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Report Analysis
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Report All Analysis
+                                </a>
+                                <a class="nav-link" href="#">View Last Time Stamp</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#users" aria-expanded="false" aria-controls="users">
+                            <div class="sb-nav-link-icon"><i class="bi bi-person-fill"></i></div>
+                            Users
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="users" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    New User
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Invite User
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Manage Contractor
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Manage Client
+                                </a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#operations" aria-expanded="false" aria-controls="operations">
+                            <div class="sb-nav-link-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            Operations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="operations" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    Projects
+                                </a>
+                                <a class="nav-link" href="#">
+                                    Tasks
+                                </a>
+                                <a class="nav-link" href="#">
+                                    User Quota
+                                </a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#help" aria-expanded="false" aria-controls="help">
+                            <div class="sb-nav-link-icon"><i class="bi bi-question-circle-fill"></i></div>
+                            Help
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="help" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Windows</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Mac</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Linux</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer left-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </div>
+                <div class="sb-sidenav-footer">
+                    10/28/2021<br />
+                    05:02:42 PM EDT
+                </div>
+            </nav>  
+        </div>
+
+        <div id="layoutSidenav_content">
+            <div class="dashboard-inner">
+                <div class="graph-panel">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Important:</strong> Please complete your weekly contracted hours before <strong> Sunday, 11:59 PM EST/EDT.</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="graph-box">
+                                <div class="graph-bar">
+                                    <div class="graph-line">
+                                        <span class="autolog-line">
+                                        </span>
+                                        <span class="overtime-line">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="graph-detail">
+                                    <h5>Autolog Summary</h5>
+                                    <div class="sign">
+                                        <span class="autolog"></span> <p>Autolog</p>
+                                    </div>
+                                    <div class="sign">
+                                        <span class="overtime"></span> <p>Overtime</p>
+                                    </div>
+                                </div>
+                                <div class="graph-timer">
+                                    1h 43m 35s
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="graph-box">
+                                <div class="graph-bar">
+                                    <div class="graph-line">
+                                        <span class="ml-appkied-line">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="graph-detail">
+                                    <h5>Manual Log Summary</h5>
+                                    <div class="sign">
+                                        <span class="ml-applied"></span> <p>ML Applied</p>
+                                    </div>
+                                    <div class="sign">
+                                        <span></span> <p>ML Approved</p>
+                                    </div>
+                                </div>
+                                <div class="graph-timer">
+                                    1h 43m 35s
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="graph-box">
+                                <div class="graph-bar">
+                                    <div class="graph-line">
+                                        <span class="leave-earned-line">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="graph-detail">
+                                    <h5>Leave Summary</h5>
+                                    <div class="sign">
+                                        <span class="leave-earned"></span> <p>Leave Earned</p>
+                                    </div>
+                                    <div class="sign">
+                                        <span></span> <p>Leave Approved</p>
+                                    </div>
+                                </div>
+                                <div class="graph-timer">
+                                    1h 43m 35s
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hours-panel">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="hours-data">
+                                <h5 class="time-title">Total Hours Today</h5>
+                                <div class="time-data">
+                                    <span>
+                                        <i class="bi bi-calendar-week-fill"></i>
+                                    </span>
+                                    <div class="timer-data">
+                                        1h 43m 35s
+                                    </div>
+                                </div>
+                                <div class="updated-time">
+                                    <span>Updated: 08/26/2021 05:31 AM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="hours-data">
+                                <h5 class="time-title">Manual Hours this Week</h5>
+                                <div class="time-data">
+                                    <span>
+                                        <i class="bi bi-calendar-week-fill"></i>
+                                    </span>
+                                    <div class="timer-data">
+                                        1h 43m 35s
+                                    </div>
+                                </div>
+                                <div class="updated-time">
+                                    <span>Pending: 00 Hours</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="hours-data border-0">
+                                <h5 class="time-title">Available PTOs</h5>
+                                <div class="time-data">
+                                    <span>
+                                        <i class="bi bi-stopwatch"></i>
+                                    </span>
+                                    <div class="timer-data">
+                                        32.69
+                                    </div>
+                                </div>
+                                <div class="updated-time">
+                                    <span>Expires on: 12/31/2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-view">
+                    <div class="table-heading">
+                        <h3>
+                            Weekly Timesheet
+                        </h3>
+                        <div class="hours-count">
+                            <i class="bi bi-clock-fill"></i> <p>Total Hours:<span>21:10:23</span></p>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <table class="vatable display nowrap mytable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Client ID</th>
+                                    <th>Client Name</th>
+                                    <th>Task</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>006</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>007</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>008</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>009</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>010</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>011</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>012</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>013</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>014</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>015</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>016</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>017</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>018</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>019</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>020</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>021</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>022</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>023</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>024</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>025</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>026</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>027</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>028</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>029</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>030</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>031</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>032</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>033</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>034</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>035</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-view">
+                    <div class="table-heading">
+                        <h3>
+                            Leave Report
+                        </h3>
+                    </div>
+                    <div class="table-box">
+                        <table class="vatable display nowrap mytable leavereporttbl" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Client ID</th>
+                                    <th>Client Name</th>
+                                    <th>Task</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core: Support</td>
+                                    <td>08/23/2021 05:48 AM	</td>
+                                    <td>08/23/2021 07:42 AM	</td>
+                                    <td>01:54:10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="leave-button">
+                        <a class="btn btn-accept"><i class="bi bi-check-lg"></i> Accept</a>
+                        <a class="btn btn-reject"><i class="bi bi-x-lg"></i> Reject</a>
+                    </div>
+                </div>
+
+                <div class="table-view">
+                    <div class="table-heading">
+                        <h3>
+                            Online/ Offline Report
+                        </h3>
+                        <div class="status-point">
+                            <div id="LoaderImage" class="loaderimg">
+                                <img src="images/Loader.gif" />
+                            </div>
+                            <div>
+                                <select id="multigames" name="games[]" class="form-control"
+                                        is="ms-dropdown" multiple required>
+                                    <option selected>Select Status</option>
+                                    <option data-image="./images/icon_email.gif" value="Online">Online</option>
+                                    <option data-image="./images/icon_faq.gif" value="Offline">Offline</option>
+                                    <option data-image="./images/icon_games.gif" value="On Leave">On Leave</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-box">
+                        <table class="vatable display nowrap mytable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Agent</th>
+                                    <th>Department</th>
+                                    <th>Department</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Adrian Maronilla</td>
+                                    <td>General Administration</td>
+                                    <td>Jennifer Del Rosario</td>
+                                    <td class="text-center"><span class="leave-dot"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Adrian Maronilla</td>
+                                    <td>General Administration</td>
+                                    <td>Jennifer Del Rosario</td>
+                                    <td class="text-center"><span class="offline-dot"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Adrian Maronilla</td>
+                                    <td>General Administration</td>
+                                    <td>Jennifer Del Rosario</td>
+                                    <td class="text-center"><span class="online-dot"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Adrian Maronilla</td>
+                                    <td>General Administration</td>
+                                    <td>Jennifer Del Rosario</td>
+                                    <td class="text-center"><span class="offline-dot"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Adrian Maronilla</td>
+                                    <td>General Administration</td>
+                                    <td>Jennifer Del Rosario</td>
+                                    <td class="text-center"><span class="online-dot"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-view">
+                    <div class="table-heading">
+                        <h3>
+                            My Clients
+                        </h3>
+                    </div>
+                    <div class="table-box">
+                        <table class="vatable display nowrap mytable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Project</th>
+                                    <th>Task</th>
+                                    <th>Last Time Stamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>20Four7VA</td>
+                                    <td>IT Core	</td>
+                                    <td>xtremexteriors</td>
+                                    <td>08/19/2021 03:38 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Audrianna Payton</td>
+                                    <td>Audrianna Payton Site Dev</td>
+                                    <td>Website Update</td>
+                                    <td>10/18/2020 04:31 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Dmitri Tassis</td>
+                                    <td>Fitwatch</td>
+                                    <td>Wordpress</td>
+                                    <td>08/21/2021 06:57 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Tim Vanvonno</td>
+                                    <td>VP Builds</td>
+                                    <td>Website</td>
+                                    <td>08/27/2021 07:24 AM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="top-footer">
+                    <div class="container">
+                        <div class="top-bar">
+                            <div class="soical-media">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-google"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                            <div class="signup-box">
+                                <h5>Sign up for our newsletter</h5>
+                                <div class="form-group">
+                                    <input placeholder="Type your email address" />
+                                    <a class="btn btn-subscribe">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="footer-text">
+                            The 20four7VA Time Tracker is a proprietary software developed by 20four7VA and for the sole use of 20four7VA and its clients. Any illegal reproduction of this website and its protected data will result in immediate legal action.
+                        </div>
+                        <div class="footer-menu">
+                            <div class="row">
+                                <div class="col-lg-3 col-6">
+                                    <ul>
+                                        <li class="head">
+                                            IMPORTANT LINKS
+                                        </li>
+                                        <li><a href="#">Freedom Table</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Report Incidence</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <ul>
+                                        <li class="head">POLICIES</li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Cookie Policy</a></li>
+                                        <li><a href="#">Terms and Condition</a></li>
+                                        <li><a href="#">Partners</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <ul>
+                                        <li class="head">HUMAN RESOURCES</li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">Hire a VA</a></li>
+                                        <li><a href="#">HR Desk</a></li>
+                                        <li><a href="#">How it works</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <ul>
+                                        <li class="head">Support</li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Submit Ticket</a></li>
+                                        <li><a href="#">User Guide</a></li>
+                                        <li><a href="#">Change Log</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright © 2015 - 2021 20four7va.com®</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://mojoaxel.github.io/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var table = $('.vatable').DataTable({
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true
+            });
+
+        });
+        $('.vachkbox').DataTable({
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'os',
+                selector: 'td:first-child'
+            },
+            order: [[1, 'asc']]
+        });
+    </script>
+    <script>
+        {
+            $(function () {
+                setTimeout(function () { $("#LoaderImage").hide(); }, 10000);
+            });
+        }
+    </script>
+    <script src="js/dd.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

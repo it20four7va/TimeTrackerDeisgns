@@ -1,0 +1,120 @@
+.file-share .file {
+    position: relative;
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+.file-share .file__input, .file-share .file__value {
+    border-radius: 3px;
+    color: #444;
+    margin-bottom: 10px;
+    /*    max-width: 22.5rem;*/
+}
+.file-share .file__input--file {
+    position: absolute;
+    opacity: 0;
+}
+.file-share .file__input--label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.file-share .file__input--label:after {
+    content: attr(data-text-btn);
+    background-color: #444444;
+    padding: 0.9375rem 1.0625rem;
+    margin: -0.9375rem -1.0625rem;
+    color: white;
+    cursor: pointer;
+}
+.file-share .file__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+    background-color: #f8f8f8;
+    box-shadow: none;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: initial;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+}
+
+.file-share .file__value:hover:after {
+    color: #fff;
+}
+.file-share .file__value:after {
+    content: "\f5dd";
+    cursor: pointer;
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    height: 22px;
+    width: 22px;
+    background-color: #E34848;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+    font-size: 12px;
+}
+.file-share .file__value:after:hover {
+    color: white;
+}
+.file-share .file__remove {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+/**/
+.fullpage.file-share .attach:after {
+    content: "\F4B3";
+    cursor: pointer;
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+    height: 25px;
+    width: 25px;
+    background-color: #444444;
+    color: #fff;
+  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+    font-size: 14px;
+}
+.fullpage.file-share .attach-file {
+    position: absolute;
+    bottom: -40px;
+    left: 76px;
+    margin: 0;
+    padding: 0;
+    width: initial;
+}
+.fullpage.file-share .file__input--file {
+  
+    width: 30px;
+}
